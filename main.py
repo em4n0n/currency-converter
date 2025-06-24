@@ -17,4 +17,6 @@ def convert_currency(base):
             return None
 
 data = convert_currency('USD')
-print(data)
+del data["USD"]
+for ticker, value in data.items():
+    print(f"{ticker}: {value}")
